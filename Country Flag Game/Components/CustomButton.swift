@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct CustomButton: View {
+    var text: String
+    var background: Color = .yellow
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(text)
+            .foregroundColor(.cyan)
+            .padding()
+            .padding(.horizontal)
+            .background(background)
+            .cornerRadius(25)
+            .shadow(radius: 10)
+        
     }
 }
 
 #Preview {
-    CustomButton()
+    CustomButton(text: "Next")
 }
